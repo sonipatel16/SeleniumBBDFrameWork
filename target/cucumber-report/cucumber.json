@@ -1,0 +1,98 @@
+[
+  {
+    "line": 3,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 4027785100,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.setUp()"
+            }
+          }
+        ],
+        "line": 9,
+        "name": "search for product",
+        "description": "",
+        "id": "search-feature;search-for-product",
+        "after": [
+          {
+            "result": {
+              "duration": 631851101,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.tearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 81600300,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "I am on homepage",
+            "match": {
+              "location": "HomeSteps.i_am_on_homepage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1039959299,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "I search for product \"shoes\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "shoes",
+                  "offset": 22
+                }
+              ],
+              "location": "SearchSteps.i_search_for_product(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 18300,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "I able to see the product",
+            "match": {
+              "location": "SearchSteps.i_able_to_see_the_product()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 8,
+            "name": "@Test3"
+          }
+        ]
+      }
+    ],
+    "name": "search feature",
+    "description": "As a user\r\nI want to  search product\r\nSo that i can see results",
+    "id": "search-feature",
+    "keyword": "Feature",
+    "uri": "search.feature",
+    "tags": [
+      {
+        "line": 1,
+        "name": "@Test3"
+      }
+    ]
+  }
+]
