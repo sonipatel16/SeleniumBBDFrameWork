@@ -11,14 +11,15 @@ Feature: login feature
     Then I should see "Welcome, Please Sign In!" text
     And the URL should contain "/login"
 
-#@"FKP1"
+  @Test5
+  Scenario: Validating my credential
+    Given I am on homepage
+    When I click on login link button on homepage
+    And I enter the  my  valid email id
+    And I enter the my valid password
+    And I click on the log in tab
+    Then I should see "my account button" in header
 
-#Scenario: Login with valid credential
-# Given I am on homepage
- # When I click on login button on homepage
-# And I enter valid email and password
- # Then I should see "log out button"
- #And I should see "my account button"
 
 
 

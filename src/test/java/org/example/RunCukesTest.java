@@ -7,7 +7,7 @@ import org.junit.runner.RunWith;
         dryRun = false,
         strict = true,
         monochrome = true,
-        tags = {"@Test3"},
+        tags = {"@Test2"},
         plugin = "json:target/cucumber-report/cucumber.json")
 
 public class RunCukesTest {
@@ -15,7 +15,7 @@ public class RunCukesTest {
 //open maven tab and click 'execute maven goal'
 //enter 'cluecumber-report:reporting' and click ok to build
 
-//report will generated in target folder as generated-report
+//report will be generated in target folder as generated-report
 //to run from intellij
 
 }

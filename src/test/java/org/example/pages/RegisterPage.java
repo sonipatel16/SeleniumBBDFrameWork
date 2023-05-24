@@ -31,7 +31,7 @@ public class RegisterPage extends DriverManager {
      WebElement clickRegisterButton;
 
 
-     @FindBy(css= ".button-1 register-continue-button")
+     @FindBy(css= ".button-1 ")
      WebElement continueButton;
 
     // public void clickButton(){
@@ -69,7 +69,7 @@ public class RegisterPage extends DriverManager {
 
             public void addEmailField () {
                 emailField.click();
-                emailField.sendKeys("sonipatel16@gmail.com");
+                emailField.sendKeys("falgunipatel@gmail.com");
                 // String actualText = emailField.getText();
                 //  return actualText;
             }
@@ -90,6 +90,7 @@ public class RegisterPage extends DriverManager {
             }
             public void registerButton(){
         clickRegisterButton.click();
+        waitForElementVisibility(clickRegisterButton,20,"element is not visible");
             }
             public void displayButton () {
                 continueButton.isDisplayed();

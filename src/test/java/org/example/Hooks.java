@@ -1,5 +1,6 @@
 package org.example;
 
+import cucumber.api.Scenario;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
 import org.example.driver.DriverManager;
@@ -15,6 +16,14 @@ public class Hooks {
     }
     @After
     public void tearDown() {
+        dm.closeBrowser();
+    }
+    @After
+    public void tearDown(Scenario scenario){
+        DriverManager driverManager;
+        if(scenario.isFailed()){
+            dm.takeScreenshot(scenario);
+        }
         dm.closeBrowser();
     }
 }

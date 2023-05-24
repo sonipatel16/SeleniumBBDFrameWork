@@ -15,7 +15,32 @@ import static org.junit.Assert.assertThat;
     public class LoginSteps extends DriverManager {
 
         LoginPage loginPage = new LoginPage();
-      //  @When("^I enter valid email and password$")
+        @When("^I enter the  my  valid email id$")
+        public void i_enter_the_my_valid_email_id() throws Throwable {
+         loginPage.enterEmail();
+        }
+
+        @When("^I enter the my valid password$")
+        public void i_enter_the_my_valid_password() throws Throwable {
+            loginPage.enterPassword();
+
+        }
+
+        @When("^I click on the log in tab$")
+        public void i_click_on_the_log_in_tab() throws Throwable {
+            loginPage.loginButtonClick();
+
+        }
+
+        @Then("^I should see \"([^\"]*)\" in header$")
+        public void i_should_see_in_header(String arg1) throws Throwable {
+            loginPage.checkMyAccount();
+
+        }
+
+
+
+        //  @When("^I enter valid email and password$")
       //  public void i_enter_valid_email_and_password(String expectedText) throws Throwable {
             // Write code here that turns the phrase above into concrete actions
           //  String myURL = getURL();
@@ -36,20 +61,20 @@ import static org.junit.Assert.assertThat;
 
 
 
-         @Then("^I should see \"([^\"]*)\" text$")
-         public void i_should_see_text(String expectedText) throws Throwable {
-             String actualText = loginPage.getWelcomeText();
-             assertEquals(expectedText, actualText);
+        // @Then("^I should see \"([^\"]*)\" text$")
+        // public void i_should_see_text(String expectedText) throws Throwable {
+           //  String actualText = loginPage.getWelcomeText();
+           //  assertEquals(expectedText, actualText);
 
-            String expectedText1 = expectedText;
+          //  String expectedText1 = expectedText;
 
 
-             }
-              @Then("^the URL should contain \"([^\"]*)\"$")
-          public void the_URL_should_contain (String expectedText) throws Throwable {
-                 String myURL = getURL();
-                 assertThat(myURL, containsString(expectedText));
-             }
+            // }
+           //   @Then("^the URL should contain \"([^\"]*)\"$")
+         // public void the_URL_should_contain (String expectedText) throws Throwable {
+               //  String myURL = getURL();
+               //  assertThat(myURL, containsString(expectedText));
+           //  }
 
 
          }
