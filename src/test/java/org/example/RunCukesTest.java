@@ -15,7 +15,7 @@ public class RunCukesTest {
 //open maven tab and click 'execute maven goal'
 //enter 'cluecumber-report:reporting' and click ok to build
 
-//report will generated in target folder as generated-report
+//report will be generated in target folder as generated-report
 //to run from intellij
 
 }

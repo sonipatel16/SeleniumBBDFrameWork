@@ -6,25 +6,34 @@ import org.openqa.selenium.support.FindBy;
 
 
     public class HomePage extends DriverManager {
-       // @FindBy(css = ".search-box-text ui-autocomplete-input")
-       // @FindBy(css = ".ico-login")
+         @FindBy(css = ".search-box-text ui-autocomplete-input")
+        WebElement searchButton;
+
         @FindBy(css = ".ico-register")
-        //public WebElement loginButton;
-        //public WebElement searchButton;
-
         public WebElement registerButton;
-        //public void clickOnSearch(){
-          // searchButton.click();
+        @FindBy(css = ".ico-login")
+        public WebElement loginElement;
 
-        // }
-       // public void clickOnLoginButton(){
-       // loginButton.click();
-       // }
 
-        public void clickOnRegister(){
-            registerButton.click();
-            //loginButton.click();
 
+        public void clickOnSearch() {
+            searchButton.click();
+
+             }
+            public void clickOnLoginElement () {
+                loginElement.click();
+                waitUntilElementIsClickable(loginElement);
+
+                //WebElement loginButtonElement;
+                // waitForElementVisibility(loginButtonElement, 20, "Element is not visible");
+                // loginButtonElement.click();
+            }
+
+            public void clickOnRegister () {
+                registerButton.click();
+                waitUntilElementIsClickable(registerButton);
+                //loginButton.click();
+
+
+            }
         }
-    }
-

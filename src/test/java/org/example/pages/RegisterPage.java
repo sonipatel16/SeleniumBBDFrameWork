@@ -11,14 +11,16 @@ public class RegisterPage extends DriverManager {
      @FindBy(id ="gender-female")
      WebElement femaleRadioButton;
     // WebElement
+    @FindBy(id = "gender-male")
+    WebElement maleRadioButton;
 
     // @FindBy(xpath = "//div[@class=\"result\"]")
 
     @FindBy(id = "FirstName")
-    WebElement firstName;
+    WebElement firstNameField;
 
      @FindBy(id = "LastName")
-     WebElement lastName;
+     WebElement lastNameField;
 
       @FindBy(id = "Email")
       WebElement emailField;
@@ -26,12 +28,13 @@ public class RegisterPage extends DriverManager {
      @FindBy(id = "Password")
      WebElement passwordField;
      @FindBy(id = "ConfirmPassword")
-     WebElement confirmPassword;
-     @FindBy(id = "register-button")
+     WebElement confirmPasswordField;
+    @FindBy(xpath = "//button[@name=\"register-button\"]")
+
      WebElement clickRegisterButton;
 
 
-     @FindBy(css= ".button-1 register-continue-button")
+     @FindBy(css=  ".button-1")
      WebElement continueButton;
 
     // public void clickButton(){
@@ -41,6 +44,9 @@ public class RegisterPage extends DriverManager {
      femaleRadioButton.click();
 
     }
+    public  void clickMaleRadioButton(){
+        maleRadioButton.click();
+    }
 
 
     // public String getPersonalDetail(){
@@ -49,47 +55,61 @@ public class RegisterPage extends DriverManager {
     //  return actualText;
 
     //  }
+    public void enterRegistrationDetails(String firstName ,String lastName, String email ,String password ,String confirmPassword){
+        firstNameField.clear();
+        firstNameField.sendKeys(firstName);
+        lastNameField.clear();
+        lastNameField.sendKeys(lastName);
+        emailField.clear();
+        emailField.sendKeys(email);
+        passwordField.clear();
+        passwordField.sendKeys(password);
+        confirmPasswordField.clear();
+        confirmPasswordField.sendKeys(confirmPassword);
 
-    public void addFirstName() {
-        firstName.click();
-        firstName.sendKeys("falguni");
+    }
+
+    public void addFirstName(String firstName) {
+      firstNameField.clear();
+      firstNameField.sendKeys(firstName);
         // String actualText = firstName.getText();
         // return actualText;
 
 
          }
 
-        public void addLastName() {
+        public void addLastName(String lastName) {
 
-            lastName.click();
-            lastName.sendKeys("Patel");
+           lastNameField.clear();
+           lastNameField.sendKeys(lastName);
             // String actualText = lastName.getText();
             // return actualText;
             }
 
-            public void addEmailField () {
-                emailField.click();
-                emailField.sendKeys("sonipatel16@gmail.com");
+            public void addEmailField (String email) {
+               emailField.clear();
+               emailField.sendKeys(email);
                 // String actualText = emailField.getText();
                 //  return actualText;
             }
 
-            public void addPasswordField () {
-                passwordField.click();
-                passwordField.sendKeys("Falguni08@");
+            public void addPasswordField (String password) {
+               passwordField.clear();
+               passwordField.sendKeys(password);
                 // String actualText = passwordField.getText();
                 //  return actualText;
             }
 
-            public void addConfirmPassword () {
-                confirmPassword.click();
-                confirmPassword.sendKeys("Falguni08@");
+            public void addConfirmPassword (String confirmPassword) {
+              confirmPasswordField.clear();
+              confirmPasswordField.sendKeys(confirmPassword);
 
                 //String actualText = confirmPassword.getText();
                 //  return actualText;
             }
             public void registerButton(){
         clickRegisterButton.click();
+       // waitForElementVisibility(clickRegisterButton,20,"element is not visible");
             }
             public void displayButton () {
                 continueButton.isDisplayed();
