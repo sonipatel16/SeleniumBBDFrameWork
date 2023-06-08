@@ -47,14 +47,14 @@ public class HomeSteps extends DriverManager {
 
     //  }
 
-   // @When("^I click on login link button on homepage$")
-   // public void i_click_on_login_link_button_on_homepage() throws Throwable {
-       // homePage.loginElement.click();
+    @When("^I click on login link button on homepage$")
+    public void i_click_on_login_link_button_on_homepage() throws Throwable {
+        homePage.loginElement.click();
     }
 
-   // @When("^I click on login button on homepage$")
-   // public void i_click_on_login_button_on_homepage() throws Throwable {
-    //    homePage.loginElement.click();
-   // }
-//}
+    @When("^I click on login button on homepage$")
+    public void i_click_on_login_button_on_homepage() throws Throwable {
+        homePage.loginElement.click();
+    }
+}
 

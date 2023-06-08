@@ -1,4 +1,4 @@
-@Test1
+
 Feature: login feature
   As a user
   I want to add login functionality

@@ -14,8 +14,8 @@ import org.openqa.selenium.support.FindBy;
         @FindBy(css = ".ico-account")
         WebElement myAccountTab;
 
-      // @FindBy(xpath = "//div[@class=\"center-1\"]/div/div/h1")
-      // WebElement welcomeText;
+       @FindBy(xpath = "//div[@class=\"center-1\"]/div/div/h1")
+       WebElement welcomeText;
        public void enterEmail(){
            validEmail.click();
            validEmail.sendKeys("sonipatel16@gmail.com");
@@ -32,10 +32,10 @@ import org.openqa.selenium.support.FindBy;
            myAccountTab.isDisplayed();
        }
 
-      // public String getWelcomeText() {
-          // String actualText = welcomeText.getText();     ///Welcome Sign in!
-         //  return actualText;
-      // }
+       public String getWelcomeText() {
+           String actualText = welcomeText.getText();     ///Welcome Sign in!
+          return actualText;
+       }
 
        public void clickOnLoginButton() {
            waitForElementVisibility(clickTab,20,"element is not visible");

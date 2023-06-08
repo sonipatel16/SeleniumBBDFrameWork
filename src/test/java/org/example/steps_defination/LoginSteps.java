@@ -47,12 +47,20 @@ import static org.junit.Assert.assertThat;
           //  assertThat(myURL,containsString(expectedText));
            // throw new PendingException();
        // }
-      //  @Then("^I should see \"([^\"]*)\"$")
-       // public void i_should_see(String expectedText) throws Throwable {
+
+        @Then("^I should see \"([^\"]*)\" text$")
+        public void i_should_see_text(String expectedText) throws Throwable {
+            String actualText = loginPage.getWelcomeText();
+            assertEquals(expectedText,actualText);
+
+        }
+       @Then("^I should see \"([^\"]*)\"$")
+        public void i_should_see(String expectedText) throws Throwable {
             // Write code here that turns the phrase above into concrete actions
 
-         //   String actualText = loginPage.getWelcomeText();
-         //   assertEquals(expectedText,actualText);
+          String actualText = loginPage.getWelcomeText();
+           assertEquals(expectedText,actualText);
+           String expectedText1 = expectedText;
            // throw new PendingException();
 
 
@@ -61,20 +69,17 @@ import static org.junit.Assert.assertThat;
 
 
 
-        // @Then("^I should see \"([^\"]*)\" text$")
-        // public void i_should_see_text(String expectedText) throws Throwable {
-           //  String actualText = loginPage.getWelcomeText();
-           //  assertEquals(expectedText, actualText);
-
-          //  String expectedText1 = expectedText;
 
 
-            // }
-           //   @Then("^the URL should contain \"([^\"]*)\"$")
-         // public void the_URL_should_contain (String expectedText) throws Throwable {
-               //  String myURL = getURL();
-               //  assertThat(myURL, containsString(expectedText));
-           //  }
+          // String expectedText1 = expectedText;
+
+
+             }
+             @Then("^the URL should contain \"([^\"]*)\"$")
+          public void the_URL_should_contain (String expectedText) throws Throwable {
+                 String myURL = getURL();
+                assertThat(myURL, containsString(expectedText));
+             }
 
 
          }

@@ -10,6 +10,7 @@ public class Hooks {
     @Before
     public void setUp() throws IllegalAccessException {
         dm.openLocalBrowser();
+       // dm.openHeadlessBrowser();
         dm.maximisingBrowser();
         dm.openURL();
         dm.applyImplicitWait();

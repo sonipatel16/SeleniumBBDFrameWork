@@ -1,8 +1,11 @@
 C:\Users\sonip\IdeaProjects\SeleniunBBDFrameWork\src\test\java\org\example\steps_defination\LoginSteps.java
-C:\Users\sonip\IdeaProjects\SeleniunBBDFrameWork\src\test\java\org\example\steps_defination\RunCukesTest.java
+C:\Users\sonip\IdeaProjects\SeleniunBBDFrameWork\src\test\java\org\example\Hooks.java
 C:\Users\sonip\IdeaProjects\SeleniunBBDFrameWork\src\test\java\org\example\pages\HomePage.java
 C:\Users\sonip\IdeaProjects\SeleniunBBDFrameWork\src\test\java\org\example\driver\DriverManager.java
-C:\Users\sonip\IdeaProjects\SeleniunBBDFrameWork\src\test\java\org\example\steps_defination\Hooks.java
+C:\Users\sonip\IdeaProjects\SeleniunBBDFrameWork\src\test\java\org\example\RunCukesTest.java
+C:\Users\sonip\IdeaProjects\SeleniunBBDFrameWork\src\test\java\org\example\steps_defination\RegisterSteps.java
 C:\Users\sonip\IdeaProjects\SeleniunBBDFrameWork\src\test\java\org\example\steps_defination\HomeSteps.java
+C:\Users\sonip\IdeaProjects\SeleniunBBDFrameWork\src\test\java\org\example\steps_defination\SearchSteps.java
 C:\Users\sonip\IdeaProjects\SeleniunBBDFrameWork\src\test\java\org\example\pages\LoginPage.java
-C:\Users\sonip\IdeaProjects\SeleniunBBDFrameWork\src\test\java\org\example\AppTest.java
+C:\Users\sonip\IdeaProjects\SeleniunBBDFrameWork\src\test\java\org\example\pages\RegisterPage.java
+C:\Users\sonip\IdeaProjects\SeleniunBBDFrameWork\src\test\java\org\example\pages\SearchPage.java

@@ -4,6 +4,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -28,15 +29,30 @@ import java.util.concurrent.TimeUnit;
         }
 
         public void openLocalBrowser() throws IllegalAccessException {
-            switch(browser){
+            switch (browser) {
                 case "chrome":
                     WebDriverManager.chromedriver().setup();
-                    driver= new ChromeDriver();
+                    driver = new ChromeDriver();
                     break;
                 default:
                     throw new IllegalAccessException("unexpected browser");
             }
         }
+
+            public void openHeadlessBrowser() throws IllegalAccessException {
+                switch(browser){
+                    case "chrome":
+                        WebDriverManager.chromedriver().setup();
+                        ChromeOptions chromeOptions = new ChromeOptions();
+                        chromeOptions.setHeadless(true);
+                        chromeOptions.addArguments("--window-size=1920,1080");
+                        driver= new ChromeDriver(chromeOptions);
+                        break;
+                    default:
+                        throw new IllegalAccessException("unexpected browser");
+                }
+            }
+
 
         public void maximisingBrowser(){
             driver.manage().window().maximize();
